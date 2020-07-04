@@ -911,6 +911,12 @@ nav .menu-item ul li a:hover {
   }
 }
 
+@media (max-width: 576px) {
+  .opening-hour__info {
+    width: 60%;
+  }
+}
+
 .opening-hour__info .title {
   margin-bottom: 2rem;
 }
@@ -984,6 +990,12 @@ nav .menu-item ul li a:hover {
 @media (max-width: 768px) {
   .opening-hour__img {
     width: 45%;
+  }
+}
+
+@media (max-width: 576px) {
+  .opening-hour__img {
+    width: 40%;
   }
 }
 
@@ -1479,6 +1491,7 @@ nav .menu-item ul li a:hover {
 @media (max-width: 992px) {
   .reservation-container .right {
     width: 100%;
+    margin-top: 3rem;
   }
 }
 
