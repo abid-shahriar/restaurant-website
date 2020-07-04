@@ -16,19 +16,29 @@
   }
 
   &__text {
-    width: 50%;
+    width: 60%;
     border-left: 5px white solid;
     padding: 0 2rem 1rem 2rem;
+
+    @include respond(tab-port) {
+      border-left-width: 2px;
+    }
 
     h1 {
       font-size: 3rem;
       text-transform: capitalize;
       color: #fff;
       margin-bottom: 1rem;
+      @include respond(tab-port) {
+        font-size: 4rem;
+      }
     }
     p {
       font-size: 1.6rem;
       color: black;
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
     }
   }
 }
@@ -59,7 +69,7 @@
 }
 
 .info-images {
-  width: 50%;
+  width: 40%;
   height: 100%;
   position: relative;
 

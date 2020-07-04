@@ -9,8 +9,9 @@
   width: 50%;
   background-color: rgba(135, 207, 235, 0.3);
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     width: 55%;
+    padding: 2rem 0;
   }
 
   .title {
@@ -20,11 +21,18 @@
       font-size: 6rem;
       font-family: "Dancing Script", cursive;
       color: var(--color-primary);
+      margin-bottom: 0.5rem;
+      @include respond(tab-port) {
+        font-size: 7rem;
+      }
     }
     h4 {
       font-size: 1.6rem;
       text-transform: capitalize;
       margin-bottom: 1rem;
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
     }
     p {
       height: 0.3rem;
@@ -37,7 +45,10 @@
   .time-table {
     pre {
       font-size: 2.8rem;
-      color: rgba(0, 0, 0, 0.596);
+      color: rgba(0, 0, 0, 0.7);
+      @include respond(tab-port) {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -48,6 +59,10 @@
     padding-bottom: 0.3rem;
     p {
       font-size: 1.6rem;
+
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
     }
   }
 }
@@ -56,7 +71,7 @@
   width: 50%;
   background-image: url(../img/open.jpg);
   background-size: cover;
-  @include respond(phone) {
+  @include respond(tab-port) {
     width: 45%;
   }
 }

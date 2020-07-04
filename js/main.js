@@ -110,26 +110,15 @@ function runAfterLoad() {
   // gallery section
 
   {
-    const imgBoxInfo = document.querySelectorAll(".img-box__info");
+    const mainImg = document.querySelectorAll(".gallery .img-box img");
     const viewImg = document.querySelector(".gallery .viewImg");
     const ImgElement = document.querySelector(".gallery .viewImg img");
     const closeImgView = document.querySelector(".viewImg p");
     let counter = 1;
 
-    imgBoxInfo.forEach((box) => {
-      const heading = document.createElement("h2");
-      heading.classList.add("img-box__info__heading");
-      heading.innerText = "blahblah";
-      box.appendChild(heading);
-
-      const button = document.createElement("button");
-      button.classList.add("img-box__info__button");
-      button.innerText = "view";
-      box.appendChild(button);
-
-      button.addEventListener("click", (e) => {
-        const imgToShow =
-          e.currentTarget.parentElement.previousElementSibling.src;
+    mainImg.forEach((img) => {
+      img.addEventListener("click", (e) => {
+        const imgToShow = e.currentTarget.src;
 
         ImgElement.src = imgToShow;
         counter = 1;
@@ -162,7 +151,6 @@ function runAfterLoad() {
       } else {
         counter = counter + 0.05;
       }
-
       imgZoom(counter);
     });
 

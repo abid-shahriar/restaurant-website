@@ -53,6 +53,9 @@
       width: 75%;
       border-collapse: collapse;
       margin: auto;
+      @include respond(tab-port) {
+        width: 90%;
+      }
 
       tr,
       td {
@@ -60,6 +63,10 @@
         text-align: left;
         padding: 0.5rem 0;
         color: white;
+        white-space: nowrap;
+        @include respond(tab-port) {
+          font-size: 2.5rem;
+        }
       }
       td {
         &:nth-child(2) {
@@ -74,5 +81,9 @@
 .menu-right {
   .menu-item {
     border-left: 4px solid white;
+
+    @include respond(tab-port) {
+      border-left-width: 2px;
+    }
   }
 }

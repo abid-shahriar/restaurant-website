@@ -1,6 +1,9 @@
 header {
   @include flexBox();
   height: 60rem;
+  @include respond(phone) {
+    height: 56rem;
+  }
 }
 
 .wrapper {
@@ -20,6 +23,11 @@ header {
   justify-content: space-between;
   padding: 10rem 0 4rem 0;
   position: relative;
+
+  @include respond(phone) {
+    justify-content: space-between;
+    padding: 10rem 0 4rem 0;
+  }
 
   .header-text {
     h4 {

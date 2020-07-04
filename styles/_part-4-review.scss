@@ -13,6 +13,10 @@
   background-repeat: no-repeat;
   position: relative;
 
+  @include respond(tab-port) {
+    padding: 4rem 0;
+  }
+
   &-slide {
     width: 60rem;
     margin: auto;
@@ -50,18 +54,30 @@
     margin-top: 2rem;
     color: var(--color-secondary);
     font-family: "Courgette", cursive;
+
+    @include respond(tab-port) {
+      font-size: 5rem;
+    }
   }
 
   h4 {
     font-size: 2.5rem;
     color: var(--color-primary);
     margin-top: 0.5rem;
+
+    @include respond(tab-port) {
+      font-size: 3.5rem;
+    }
   }
   p {
     font-size: 1.8rem;
     color: white;
     text-align: center;
     margin-top: 2rem;
+
+    @include respond(tab-port) {
+      font-size: 2.5rem;
+    }
   }
 }
 
