@@ -813,7 +813,7 @@ nav .menu-item ul li a:hover {
 
 @media (max-width: 576px) {
   .opening-hour__info {
-    width: 50%;
+    width: 55%;
   }
 }
 
@@ -864,7 +864,7 @@ nav .menu-item ul li a:hover {
 
 @media (max-width: 576px) {
   .opening-hour__img {
-    width: 50%;
+    width: 45%;
   }
 }
 

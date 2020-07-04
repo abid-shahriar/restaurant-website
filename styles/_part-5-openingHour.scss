@@ -10,7 +10,7 @@
   background-color: rgba(135, 207, 235, 0.3);
 
   @include respond(phone) {
-    width: 50%;
+    width: 55%;
   }
 
   .title {
@@ -57,6 +57,6 @@
   background-image: url(../img/open.jpg);
   background-size: cover;
   @include respond(phone) {
-    width: 50%;
+    width: 45%;
   }
 }
