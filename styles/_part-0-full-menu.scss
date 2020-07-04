@@ -1,0 +1,86 @@
+.full-menu {
+  height: auto;
+  width: 100%;
+  background-color: #999;
+  padding: 12rem 4rem 0;
+  transition: 0.7s ease;
+  transform-origin: top;
+
+  .menu-heading {
+    @include flexBox(column);
+
+    h1 {
+      font-size: 5rem;
+      color: var(--color-secondary);
+      font-family: "Dancing Script", cursive;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      width: 50%;
+      text-align: center;
+      font-size: 1.8rem;
+      color: white;
+    }
+  }
+}
+
+.menu-container {
+  @include flexBox;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+
+  & > [class*="menu-"] {
+    @include flexBox(column);
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+    flex-basis: 45%;
+    margin: 0 1rem 8rem;
+    min-height: 92rem;
+
+    .title {
+      text-align: left;
+      h3 {
+        font-size: 3rem;
+        color: var(--color-secondary);
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+.dishes {
+  margin-bottom: 1rem;
+  width: 100%;
+  .item {
+    @include flexBox;
+    border: 1px solid rgba(0, 0, 0, 0.493);
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    .info {
+      width: 70%;
+      h2 {
+        display: block;
+        width: 100%;
+        text-align: left;
+        font-size: 2rem;
+        color: white;
+      }
+      p {
+        font-size: 1.4rem;
+        text-align: justify;
+      }
+    }
+
+    .price {
+      width: 30%;
+      p {
+        text-align: right;
+        font-size: 2rem;
+        color: var(--color-secondary);
+      }
+    }
+  }
+}

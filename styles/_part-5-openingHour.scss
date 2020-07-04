@@ -1,0 +1,62 @@
+.opening-hour {
+  height: auto;
+  display: flex;
+}
+
+.opening-hour__info {
+  padding: 4rem 0;
+  @include flexBox(column);
+  width: 50%;
+  background-color: rgba(135, 207, 235, 0.3);
+
+  @include respond(phone) {
+    width: 50%;
+  }
+
+  .title {
+    margin-bottom: 2rem;
+
+    h1 {
+      font-size: 6rem;
+      font-family: "Dancing Script", cursive;
+      color: var(--color-primary);
+    }
+    h4 {
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      margin-bottom: 1rem;
+    }
+    p {
+      height: 0.3rem;
+      width: 20rem;
+      background-color: var(--color-primary);
+      margin: auto;
+    }
+  }
+
+  .time-table {
+    pre {
+      font-size: 2.8rem;
+      color: rgba(0, 0, 0, 0.596);
+    }
+  }
+
+  .hotline {
+    margin-top: 2rem;
+    border-left: 5px solid var(--color-primary);
+    padding-left: 1rem;
+    padding-bottom: 0.3rem;
+    p {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.opening-hour__img {
+  width: 50%;
+  background-image: url(../img/open.jpg);
+  background-size: cover;
+  @include respond(phone) {
+    width: 50%;
+  }
+}

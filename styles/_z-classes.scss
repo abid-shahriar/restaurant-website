@@ -1,0 +1,13 @@
+.mainSectionhide {
+  transform: translateX(-100%);
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.menuSectionhide {
+  transform: translateX(100%);
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+}

@@ -1,0 +1,62 @@
+@keyframes navAnimation {
+  0% {
+    transform: translateY(-6rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// @keyframes img1Animation {
+//   0% {
+//     left: 0%;
+//     z-index: 1;
+//     transform: translateY(-50%) scale(0.8);
+//   }
+//   50% {
+//     left: 20%;
+//     z-index: 2;
+//     transform: translateY(-50%) scale(0.8);
+//   }
+//   100% {
+//     left: 10%;
+//     z-index: 3;
+//     transform: translateY(-50%) scale(1);
+//   }
+// }
+
+// @keyframes img2Animation {
+//   0% {
+//     left: 20%;
+//     z-index: 2;
+//     transform: translateY(-50%) scale(0.8);
+//   }
+//   50% {
+//     left: 10%;
+//     z-index: 3;
+//     transform: translateY(-50%) scale(1);
+//   }
+//   100% {
+//     left: 0%;
+//     z-index: 1;
+//     transform: translateY(-50%) scale(0.8);
+//   }
+// }
+
+// @keyframes img3Animation {
+//   0% {
+//     left: 20%;
+//     z-index: 3;
+//     transform: translateY(-50%) scale(1);
+//   }
+//   50% {
+//     left: 0%;
+//     z-index: 1;
+//     transform: translateY(-50%) scale(0.8);
+//   }
+//   100% {
+//     left: 20%;
+//     z-index: 2;
+//     transform: translateY(-50%) scale(0.8);
+//   }
+// }

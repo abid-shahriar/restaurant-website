@@ -1,0 +1,139 @@
+.info {
+  @include flexBox(column);
+}
+
+@mixin infoSections {
+  width: 100%;
+  height: 35rem;
+  position: relative;
+  @include flexBox();
+  padding: 0 4rem;
+  background-color: rgba(135, 207, 235, 0.3);
+
+  @include respond(tab-land) {
+    padding: 0 0.5rem;
+    height: 30rem;
+  }
+
+  &__text {
+    width: 50%;
+    border-left: 5px white solid;
+    padding: 0 2rem 1rem 2rem;
+
+    h1 {
+      font-size: 3rem;
+      text-transform: capitalize;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1.6rem;
+      color: black;
+    }
+  }
+}
+
+// About section
+.about {
+  @include infoSections();
+}
+
+// foods Section
+.foods {
+  @include infoSections();
+  @include flexBox(row-reverse);
+  background-color: rgba(135, 207, 235, 0.075);
+
+  &__text {
+    border-color: black;
+
+    h1 {
+      color: black;
+    }
+  }
+}
+
+// chef Section
+.chef {
+  @include infoSections();
+}
+
+.info-images {
+  width: 50%;
+  height: 100%;
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 20%;
+    transition: 0.9s ease-in-out;
+    backface-visibility: hidden;
+    transform-origin: center;
+
+    &:nth-child(1) {
+      left: 3%;
+      transform: translateY(-50%) scale(0.8);
+      opacity: 0.5;
+      z-index: 1;
+    }
+    &:nth-child(2) {
+      left: 38%;
+      transform: translateY(-50%) scale(0.8);
+      z-index: 2;
+      opacity: 0.5;
+    }
+    &:nth-child(3) {
+      transform: translateY(-50%) scale(1);
+      z-index: 3;
+      opacity: 1;
+    }
+  }
+}
+
+.img-swap-1 {
+  img {
+    &:nth-child(1) {
+      left: 38%;
+      transform: translateY(-50%) scale(0.8);
+      z-index: 2;
+      opacity: 0.5;
+    }
+    &:nth-child(2) {
+      left: 20%;
+      transform: translateY(-50%) scale(1);
+      z-index: 3;
+      opacity: 1;
+    }
+    &:nth-child(3) {
+      left: 3%;
+      transform: translateY(-50%) scale(0.8);
+      z-index: 1;
+      opacity: 0.5;
+    }
+  }
+}
+
+.img-swap-2 {
+  img {
+    &:nth-child(1) {
+      left: 20%;
+      transform: translateY(-50%) scale(1);
+      z-index: 3;
+      opacity: 1;
+    }
+    &:nth-child(2) {
+      left: 3%;
+      transform: translateY(-50%) scale(0.8);
+      z-index: 1;
+      opacity: 0.5;
+    }
+    &:nth-child(3) {
+      left: 38%;
+      transform: translateY(-50%) scale(0.8);
+      z-index: 2;
+      opacity: 0.5;
+    }
+  }
+}

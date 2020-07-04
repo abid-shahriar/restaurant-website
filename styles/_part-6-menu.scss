@@ -1,0 +1,78 @@
+.menu {
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ),
+    url(../img/menu-bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  height: auto;
+  padding: 4rem 0;
+  @include flexBox();
+  flex-wrap: wrap;
+  background-color: rgba(255, 250, 205, 0.616);
+
+  .menu-btn {
+    margin-top: 4rem;
+    appearance: none;
+    padding: 1rem 2rem;
+    font-size: 2.6rem;
+    font-family: "Courgette", cursive;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: var(--color-primary);
+    }
+  }
+}
+
+.menu-left,
+.menu-right {
+  width: 50%;
+  height: 100%;
+  @include flexBox(column);
+
+  h2 {
+    font-size: 5rem;
+    font-family: "Courgette", cursive;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    color: var(--color-secondary);
+  }
+
+  .menu-item {
+    width: 100%;
+
+    table {
+      width: 75%;
+      border-collapse: collapse;
+      margin: auto;
+
+      tr,
+      td {
+        font-size: 2rem;
+        text-align: left;
+        padding: 0.5rem 0;
+        color: white;
+      }
+      td {
+        &:nth-child(2) {
+          color: var(--color-primary);
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.menu-right {
+  .menu-item {
+    border-left: 4px solid white;
+  }
+}

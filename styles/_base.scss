@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  --color-primary: #c69963;
+  --color-secondary: #e5d43e;
+  --bg-color-white: #eee;
+  --bg-color-dark: #111;
+  --border: 1px solid red;
+  --box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+  scroll-behavior: smooth;
+
+  @include respond(tab-port) {
+    font-size: 45%;
+  }
+
+  @include respond(phone) {
+    font-size: 30%;
+  }
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  background-color: var(--bg-color-white);
+  //   font-family: "Dancing Script", cursive;
+  //   font-family: "Great Vibes", cursive;
+  //   font-family: 'Courgette', cursive;
+}
+
+a {
+  cursor: pointer;
+}
+
+.mainSection {
+  transition: 0.7s ease;
+
+  transform-origin: top;
+}
