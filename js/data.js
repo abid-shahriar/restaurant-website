@@ -81,7 +81,7 @@ export const foodData = [
     title: "Spicy Mixed Olives",
     category: "Appeteasers",
     price: 30.0,
-    desc: `Co-Starring Garlic, Pepper and Chili`,
+    desc: `Chicken Livers Topped with PERi-PERi Sauce, Served with A Roll To Soak Up The Sauce`,
   },
   {
     id: 13,
@@ -102,7 +102,7 @@ export const foodData = [
     title: "PERi-PERi Wedges",
     category: "Appeteasers",
     price: 70.0,
-    desc: `Co-Starring Garlic, Pepper and Chili`,
+    desc: `Dive Into Temping Roasted Red Pepper and Chili Spice Dip with Warm Pita Strips`,
   },
   {
     id: 16,
@@ -116,21 +116,21 @@ export const foodData = [
     title: "1/2 Chicken",
     category: "lunch",
     price: 90.0,
-    desc: `Co-Starring Garlic, Pepper and Chili`,
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
   {
     id: 18,
     title: "5 Chicken Wings",
     category: "lunch",
     price: 30.0,
-    desc: `Co-Starring Garlic, Pepper and Chili`,
+    desc: `Pour Smoky PERi-PERi Oil Over Creamy Hummus and Dig in with Strips Of Warm Pita`,
   },
   {
     id: 19,
     title: "Wing Roulette",
     category: "lunch",
     price: 30.0,
-    desc: `10 Wings in PERi-PERi Flavors`,
+    desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird`,
   },
   {
     id: 20,

@@ -15,7 +15,7 @@
   }
 
   @include respond(phone) {
-    width: 60%;
+    width: 65%;
   }
 
   .title {
@@ -80,6 +80,6 @@
   }
 
   @include respond(phone) {
-    width: 40%;
+    width: 35%;
   }
 }
