@@ -72,12 +72,18 @@ a {
 .full-menu {
   height: auto;
   width: 100%;
-  background-color: #999;
-  padding: 12rem 4rem 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 12rem 4rem 8rem;
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
   -webkit-transform-origin: top;
           transform-origin: top;
+}
+
+@media (max-width: 768px) {
+  .full-menu {
+    padding: 12rem 1rem 4rem;
+  }
 }
 
 .full-menu .menu-heading {
@@ -101,13 +107,27 @@ a {
   color: var(--color-secondary);
   font-family: "Dancing Script", cursive;
   margin-bottom: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .full-menu .menu-heading h1 {
+    font-size: 6.5rem;
+  }
 }
 
 .full-menu .menu-heading p {
-  width: 50%;
+  width: 70%;
   text-align: center;
   font-size: 1.8rem;
   color: white;
+}
+
+@media (max-width: 768px) {
+  .full-menu .menu-heading p {
+    width: 80%;
+    font-size: 2.5rem;
+  }
 }
 
 .menu-container {
@@ -150,14 +170,38 @@ a {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 1rem;
-  -ms-flex-preferred-size: 45%;
-      flex-basis: 45%;
-  margin: 0 1rem 8rem;
-  min-height: 92rem;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+@media (max-width: 768px) {
+  .menu-container > [class*="menu-"] {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-container > [class*="menu-"] {
+    margin: 0;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
 }
 
 .menu-container > [class*="menu-"] .title {
+  display: block;
   text-align: left;
+}
+
+@media (max-width: 768px) {
+  .menu-container > [class*="menu-"] .title {
+    text-align: center;
+  }
 }
 
 .menu-container > [class*="menu-"] .title h3 {
@@ -166,9 +210,30 @@ a {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .menu-container > [class*="menu-"] .title h3 {
+    font-size: 4rem;
+  }
+}
+
 .dishes {
-  margin-bottom: 1rem;
   width: 100%;
+  height: 60rem;
+  overflow-y: scroll;
+  margin-bottom: 4rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.dishes::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.2rem;
+}
+
+.dishes::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
+  border-radius: 50px;
 }
 
 .dishes .item {
@@ -185,10 +250,14 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid rgba(0, 0, 0, 0.493);
+  border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 1rem;
   border-radius: 5px;
   width: 100%;
+}
+
+.dishes .item:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .dishes .item .info {
@@ -203,9 +272,21 @@ a {
   color: white;
 }
 
+@media (max-width: 768px) {
+  .dishes .item .info h2 {
+    font-size: 3rem;
+  }
+}
+
 .dishes .item .info p {
   font-size: 1.4rem;
-  text-align: justify;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .dishes .item .info p {
+    font-size: 2.4rem;
+  }
 }
 
 .dishes .item .price {
@@ -216,6 +297,12 @@ a {
   text-align: right;
   font-size: 2rem;
   color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .dishes .item .price p {
+    font-size: 3rem;
+  }
 }
 
 header {
@@ -1636,7 +1723,7 @@ nav .menu-item ul li a:hover {
 
 footer {
   height: auto;
-  background: rgba(0, 0, 0, 0.9);
+  background: #222;
   padding: 2rem 0;
 }
 
