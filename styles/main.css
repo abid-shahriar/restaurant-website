@@ -1182,20 +1182,13 @@ nav .menu-item ul li a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 50%;
+  width: 100%;
   background-color: rgba(135, 207, 235, 0.3);
 }
 
 @media (max-width: 768px) {
   .opening-hour__info {
-    width: 55%;
     padding: 2rem 0;
-  }
-}
-
-@media (max-width: 576px) {
-  .opening-hour__info {
-    width: 65%;
   }
 }
 
@@ -1236,13 +1229,13 @@ nav .menu-item ul li a:hover {
 }
 
 .opening-hour__info .time-table pre {
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   color: rgba(0, 0, 0, 0.7);
 }
 
 @media (max-width: 768px) {
   .opening-hour__info .time-table pre {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 
@@ -1251,33 +1244,16 @@ nav .menu-item ul li a:hover {
   border-left: 5px solid var(--color-primary);
   padding-left: 1rem;
   padding-bottom: 0.3rem;
+  font-size: 3rem;
 }
 
 .opening-hour__info .hotline p {
-  font-size: 1.6rem;
+  font-size: 2.6rem;
 }
 
 @media (max-width: 768px) {
   .opening-hour__info .hotline p {
-    font-size: 2rem;
-  }
-}
-
-.opening-hour__img {
-  width: 50%;
-  background-image: url(../img/open.jpg);
-  background-size: cover;
-}
-
-@media (max-width: 768px) {
-  .opening-hour__img {
-    width: 45%;
-  }
-}
-
-@media (max-width: 576px) {
-  .opening-hour__img {
-    width: 35%;
+    font-size: 2.5rem;
   }
 }
 
@@ -1926,7 +1902,7 @@ nav .menu-item ul li a:hover {
 
 footer {
   height: auto;
-  background: #333;
+  background-color: #cfe5ed;
   padding: 2rem 0;
   -webkit-clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
@@ -1956,10 +1932,9 @@ footer {
 
 .footer-container .social-icons h1 {
   font-size: 6rem;
-  color: white;
   font-family: "Dancing Script", cursive;
   margin-bottom: 3rem;
-  color: var(--color-secondary);
+  color: black;
 }
 
 .footer-container .social-icons .icons {
@@ -1991,7 +1966,7 @@ footer {
 
 .footer-container .social-icons .icons img {
   width: 6rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   padding: 1rem;
   border-radius: 5px;
   -webkit-filter: grayscale(50%);
@@ -2044,7 +2019,7 @@ footer {
 
 .footer-bottom h3 {
   font-size: 2.5rem;
-  color: var(--color-secondary);
+  color: black;
   margin-bottom: 1rem;
 }
 
@@ -2056,7 +2031,7 @@ footer {
 
 .footer-bottom p {
   font-size: 1.6rem;
-  color: white;
+  color: black;
   line-height: 3rem;
 }
 
@@ -2067,7 +2042,7 @@ footer {
 }
 
 .footer-bottom p a {
-  color: white;
+  color: rgba(0, 0, 0, 0.719);
   text-decoration: none;
   -webkit-transition: 0.3s;
   transition: 0.3s;

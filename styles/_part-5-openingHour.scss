@@ -6,16 +6,14 @@
 .opening-hour__info {
   padding: 4rem 0;
   @include flexBox(column);
-  width: 50%;
+  width: 100%;
   background-color: rgba(135, 207, 235, 0.3);
 
   @include respond(tab-port) {
-    width: 55%;
     padding: 2rem 0;
   }
 
   @include respond(phone) {
-    width: 65%;
   }
 
   .title {
@@ -48,10 +46,10 @@
 
   .time-table {
     pre {
-      font-size: 2.8rem;
+      font-size: 3.8rem;
       color: rgba(0, 0, 0, 0.7);
       @include respond(tab-port) {
-        font-size: 3rem;
+        font-size: 4rem;
       }
     }
   }
@@ -61,25 +59,13 @@
     border-left: 5px solid var(--color-primary);
     padding-left: 1rem;
     padding-bottom: 0.3rem;
+    font-size: 3rem;
     p {
-      font-size: 1.6rem;
+      font-size: 2.6rem;
 
       @include respond(tab-port) {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
     }
-  }
-}
-
-.opening-hour__img {
-  width: 50%;
-  background-image: url(../img/open.jpg);
-  background-size: cover;
-  @include respond(tab-port) {
-    width: 45%;
-  }
-
-  @include respond(phone) {
-    width: 35%;
   }
 }
