@@ -72,7 +72,10 @@ a {
 .full-menu {
   height: auto;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(../img/food-menu-bg.jpg);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/food-menu-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   padding: 12rem 4rem 8rem;
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
@@ -282,6 +285,7 @@ a {
   text-align: left;
   font-size: 2rem;
   color: white;
+  margin-bottom: 5px;
 }
 
 @media (max-width: 768px) {
@@ -293,6 +297,7 @@ a {
 .dishes .item .info p {
   font-size: 1.4rem;
   text-align: left;
+  color: #aaa;
 }
 
 @media (max-width: 768px) {
