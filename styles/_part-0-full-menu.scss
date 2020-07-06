@@ -9,7 +9,7 @@
     url(../img/food-menu-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 12rem 4rem 8rem;
+  padding: 12rem 4rem 4rem;
   transition: 0.7s ease;
   transform-origin: top;
 
@@ -68,6 +68,7 @@
     flex-basis: 48%;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 5px;
+    margin-bottom: 4rem;
 
     @include respond(tab-port) {
       justify-content: center;
@@ -77,7 +78,7 @@
     @include respond(tab-port) {
       margin: 0;
       flex-basis: 90%;
-      margin-bottom: 10rem;
+      margin-bottom: 6rem;
     }
 
     .title {

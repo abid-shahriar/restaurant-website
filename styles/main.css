@@ -76,7 +76,7 @@ a {
   background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/food-menu-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 12rem 4rem 8rem;
+  padding: 12rem 4rem 4rem;
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
   -webkit-transform-origin: top;
@@ -194,6 +194,7 @@ a {
       flex-basis: 48%;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 5px;
+  margin-bottom: 4rem;
 }
 
 @media (max-width: 768px) {
@@ -212,7 +213,7 @@ a {
     margin: 0;
     -ms-flex-preferred-size: 90%;
         flex-basis: 90%;
-    margin-bottom: 10rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -2064,8 +2065,8 @@ footer {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-animation: loader 5s ease-in-out infinite both;
-          animation: loader 5s ease-in-out infinite both;
+  -webkit-animation: loader 2s ease-in-out infinite;
+          animation: loader 2s ease-in-out infinite;
 }
 
 @-webkit-keyframes loader {
@@ -2115,6 +2116,8 @@ footer {
   z-index: 21;
   -webkit-transition: 1s;
   transition: 1s;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 .loader {
@@ -2125,8 +2128,9 @@ footer {
   margin: auto;
 }
 
-.preloaderFadeOut {
-  opacity: 0;
+#preloader.preloaderFadeOut {
+  height: 0;
+  overflow: hidden;
   pointer-events: none;
 }
 

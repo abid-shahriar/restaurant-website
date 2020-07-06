@@ -12,7 +12,7 @@
   top: 0;
   left: 0;
 
-  animation: loader 5s ease-in-out infinite both;
+  animation: loader 2s ease-in-out infinite;
 }
 
 @keyframes loader {
@@ -40,6 +40,7 @@
   left: 0;
   z-index: 21;
   transition: 1s;
+  transform-origin: bottom;
 }
 
 .loader {
@@ -50,7 +51,8 @@
   margin: auto;
 }
 
-.preloaderFadeOut {
-  opacity: 0;
+#preloader.preloaderFadeOut {
+  height: 0;
+  overflow: hidden;
   pointer-events: none;
 }
