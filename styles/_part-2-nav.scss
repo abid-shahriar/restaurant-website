@@ -21,6 +21,12 @@ nav {
     transition: 0.4s;
   }
 
+  @supports not (backdrop-filter: blur()) {
+    &::before {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;

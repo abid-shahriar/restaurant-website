@@ -467,6 +467,12 @@ nav {
   }
 }
 
+@supports not ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
+  nav::before {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+}
+
 nav::before {
   content: "";
   position: absolute;
