@@ -25,6 +25,17 @@ function runAfterLoad() {
     navToggle.addEventListener("click", (e) => {
       nav.classList.toggle("active");
     });
+
+    // click anywhere else to toogle navbar
+    window.addEventListener("click", (e) => {
+      if (
+        nav.classList.contains("active") &&
+        e.target.classList[0] !== "navbar" &&
+        e.target.classList[0] !== "nav-toggle"
+      ) {
+        nav.classList.remove("active");
+      }
+    });
   }
 
   // info section image slide
