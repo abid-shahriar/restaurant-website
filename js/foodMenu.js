@@ -1,12 +1,5 @@
 import { foodData } from "./data.js";
 
-window.addEventListener("load", () => {
-  const preloader = document.querySelector(".preloader");
-  setTimeout(() => {
-    preloader.classList.add("preloaderFadeOut");
-  }, 1000);
-});
-
 window.addEventListener("DOMContentLoaded", () => {
   // food menu section
   {

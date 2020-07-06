@@ -29,9 +29,9 @@
       rel="stylesheet"
     />
   </head>
-  <body style="background-color: black;">
+  <body onload="onLoadFunction()">
     <!-- Part-8 Preloader Section Start ################ -->
-    <div class="preloader">
+    <div id="preloader">
       <span class="loader" data-text="Loading...">Loading...</span>
     </div>
     <!-- Part-8 Preloader Section End ################ -->
@@ -181,6 +181,14 @@
     <!-- Part-8 Footer Section End ################ -->
 
     <!-- JavaScript -->
+    <script>
+      const preloader = document.getElementById("preloader");
+      function onLoadFunction() {
+        setTimeout(() => {
+          preloader.classList.add("preloaderFadeOut");
+        }, 1000);
+      }
+    </script>
     <script src="./js/foodMenu.js" type="module"></script>
   </body>
 </html>
