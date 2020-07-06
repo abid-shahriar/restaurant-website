@@ -1,0 +1,56 @@
+.loader {
+  color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: attr(data-text);
+  width: 100%;
+  color: #fff;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  animation: loader 5s ease-in-out infinite both;
+}
+
+@keyframes loader {
+  0%,
+  10%,
+  90%,
+  100% {
+    clip-path: circle(0 at 50% 50%);
+  }
+
+  40%,
+  60% {
+    clip-path: circle(50vmax at 50% 50%);
+  }
+}
+
+.preloader {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #009688;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 21;
+  transition: 1s;
+}
+
+.loader {
+  font-family: "Baloo Tamma", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.preloaderFadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
