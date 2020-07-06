@@ -4,9 +4,11 @@
     url(../img/reservation-bg.jpg);
   background-size: cover;
   padding: 8rem;
+  padding-bottom: 15rem;
 
   @include respond(tab-land) {
-    padding: 2rem;
+    padding: 7rem;
+    padding-bottom: 15rem;
   }
 }
 

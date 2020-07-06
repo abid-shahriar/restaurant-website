@@ -156,6 +156,17 @@ a {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 4rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .menu-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .menu-container > [class*="menu-"] {
@@ -179,8 +190,10 @@ a {
       -ms-flex-pack: start;
           justify-content: flex-start;
   padding: 1rem;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
 }
 
 @media (max-width: 768px) {
@@ -197,8 +210,9 @@ a {
 @media (max-width: 768px) {
   .menu-container > [class*="menu-"] {
     margin: 0;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+    margin-bottom: 10rem;
   }
 }
 
@@ -230,7 +244,6 @@ a {
   height: 60rem;
   overflow-y: scroll;
   margin-bottom: 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.521);
   border-radius: 5px;
   padding: 1rem;
 }
@@ -265,7 +278,7 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1rem;
   border-radius: 5px;
   width: 100%;
@@ -427,7 +440,7 @@ header {
 nav {
   z-index: 10;
   border-bottom: 2px solid var(--color-secondary);
-  height: 8rem;
+  height: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -444,7 +457,7 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 5rem;
+  padding: 0 1rem;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
   position: absolute;
@@ -1274,7 +1287,7 @@ nav .menu-item ul li a:hover {
   background-size: cover;
   background-attachment: fixed;
   height: auto;
-  padding: 4rem 0;
+  padding: 8rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1291,6 +1304,12 @@ nav .menu-item ul li a:hover {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: rgba(255, 250, 205, 0.616);
+}
+
+@media (max-width: 768px) {
+  .menu {
+    padding-top: 60px;
+  }
 }
 
 .menu .menu-btn {
@@ -1401,8 +1420,8 @@ nav .menu-item ul li a:hover {
   height: auto;
   width: 100%;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.753);
-  padding: 10rem 5rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1644,11 +1663,13 @@ nav .menu-item ul li a:hover {
   background: linear-gradient(120deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/reservation-bg.jpg);
   background-size: cover;
   padding: 8rem;
+  padding-bottom: 15rem;
 }
 
 @media (max-width: 992px) {
   .reservation {
-    padding: 2rem;
+    padding: 7rem;
+    padding-bottom: 15rem;
   }
 }
 
@@ -1905,8 +1926,15 @@ nav .menu-item ul li a:hover {
 
 footer {
   height: auto;
-  background: #222;
+  background: #333;
   padding: 2rem 0;
+  -webkit-clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
+          clip-path: polygon(50% 15%, 100% 0, 100% 100%, 0 100%, 0 0);
+  margin-top: -10rem;
+}
+
+.footer-container {
+  padding-top: 8rem;
 }
 
 .footer-container .social-icons {

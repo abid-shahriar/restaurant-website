@@ -54,13 +54,21 @@
   @include flexBox;
   flex-wrap: wrap;
   margin-top: 4rem;
+  justify-content: space-between;
+
+  @include respond(tab-port) {
+    justify-content: center;
+  }
 
   & > [class*="menu-"] {
     @include flexBox(column);
     align-items: flex-start;
     justify-content: flex-start;
     padding: 1rem;
-    flex-basis: 50%;
+    flex-basis: 48%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+
     @include respond(tab-port) {
       justify-content: center;
       align-items: center;
@@ -68,7 +76,8 @@
 
     @include respond(tab-port) {
       margin: 0;
-      flex-basis: 100%;
+      flex-basis: 90%;
+      margin-bottom: 10rem;
     }
 
     .title {
@@ -95,7 +104,6 @@
   height: 60rem;
   overflow-y: scroll;
   margin-bottom: 4rem;
-  border: 1px solid rgba(255, 255, 255, 0.521);
   border-radius: 5px;
   padding: 1rem;
 
@@ -114,7 +122,7 @@
   }
   .item {
     @include flexBox;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     padding: 1rem;
     border-radius: 5px;
     width: 100%;

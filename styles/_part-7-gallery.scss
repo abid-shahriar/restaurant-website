@@ -2,8 +2,8 @@
   height: auto;
   width: 100%;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.753);
-  padding: 10rem 5rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2rem;
   @include flexBox;
 
   @include respond(tab-port) {

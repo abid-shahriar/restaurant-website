@@ -1,10 +1,10 @@
 nav {
   z-index: 10;
   border-bottom: 2px solid var(--color-secondary);
-  height: 8rem;
+  height: 7rem;
   @include flexBox();
   justify-content: space-between;
-  padding: 0 5rem;
+  padding: 0 1rem;
   box-shadow: var(--box-shadow);
   position: absolute;
   top: 0;
