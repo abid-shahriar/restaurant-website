@@ -1,9 +1,7 @@
 nav {
   z-index: 10;
   border-bottom: 2px solid var(--color-secondary);
-  // border-bottom: 5px solid rgba(0, 0, 0, 0.2);
   height: 8rem;
-  // background-color: rgba(0, 0, 0, 0.8);
   @include flexBox();
   justify-content: space-between;
   padding: 0 5rem;
@@ -12,12 +10,15 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
+  transition: 0.4s;
 
   @include respond(tab-port) {
     flex-direction: column;
     align-items: flex-start;
-    height: auto;
     padding: 2rem 0;
+    height: 60px;
+    overflow: hidden;
+    transition: 0.4s;
   }
 
   &::before {
@@ -33,28 +34,71 @@ nav {
   }
 
   .logo {
-    height: 7rem;
-    width: 7rem;
+    height: 100%;
+    width: auto;
     position: absolute;
-    top: 2rem;
-    right: 4rem;
-    a {
-      img {
-        height: 100%;
-        width: 100%;
+    right: 2rem;
+    top: 0;
+    @include flexBox;
+    @include respond(tab-port) {
+      height: 58px;
+    }
 
+    a {
+      @include flexBox;
+      text-decoration: none;
+      img {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        top: -6px;
+
+        @include respond(phone) {
+          height: 35px;
+          width: 35px;
+        }
+      }
+
+      span {
+        font-size: 4rem;
+        font-family: "Dancing Script", cursive;
+        color: var(--color-secondary);
+        display: inline-block;
         @include respond(tab-port) {
-          height: 9rem;
-          width: 9rem;
+          font-size: 36px;
+        }
+        @include respond(phone) {
+          font-size: 25px;
         }
       }
     }
   }
 
   .nav-toggle {
+    display: none;
     font-size: 3rem;
     color: white;
     margin: 0 2rem;
+    cursor: pointer;
+
+    span {
+      display: block;
+      margin: 6px 0;
+      height: 4px;
+      width: 35px;
+      background-color: var(--color-secondary);
+      border-radius: 50px;
+      pointer-events: none;
+      transition: 0.4s;
+
+      &:nth-child(2) {
+        width: 25px;
+      }
+    }
+
+    @include respond(tab-port) {
+      display: inline-block;
+    }
   }
 
   .menu-item {
@@ -72,16 +116,21 @@ nav {
         margin: 0 1rem;
 
         a {
+          font-family: "Courgette", cursive;
           display: inline-block;
           text-decoration: none;
           font-size: 2.5rem;
-          color: white;
+          color: var(--color-secondary);
           padding: 1.2rem 1rem;
           transition: 0.3s;
 
           @include respond(tab-port) {
             font-size: 3.5rem;
             margin: 1rem 0;
+          }
+          @include respond(phone) {
+            font-size: 5.5rem;
+            margin: 1.5rem 0;
           }
 
           &:hover {

@@ -6,10 +6,10 @@ function runAfterLoad() {
   // navbar section
   {
     const nav = document.querySelector("nav");
+    const navToggle = document.querySelector(".nav-toggle");
 
     (function fixedNav() {
       window.addEventListener("scroll", (e) => {
-        // const headerHeight = header.getBoundingClientRect().height;
         const navHeight = nav.getBoundingClientRect().height;
         const totalHeight = navHeight + 100;
         const scrollHeight = window.pageYOffset;
@@ -21,6 +21,10 @@ function runAfterLoad() {
         }
       });
     })();
+    // navtoggle
+    navToggle.addEventListener("click", (e) => {
+      nav.classList.toggle("active");
+    });
   }
 
   // info section image slide
@@ -108,7 +112,6 @@ function runAfterLoad() {
   }
 
   // gallery section
-
   {
     const mainImg = document.querySelectorAll(".gallery .img-box img");
     const viewImg = document.querySelector(".gallery .viewImg");

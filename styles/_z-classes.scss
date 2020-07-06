@@ -11,3 +11,24 @@
   pointer-events: none;
   position: absolute;
 }
+
+.active {
+  transition: 0.4s;
+  height: 252px;
+
+  .nav-toggle {
+    span {
+      &:nth-child(1) {
+        width: 25px;
+      }
+
+      &:nth-child(2) {
+        width: 35px;
+      }
+
+      &:nth-child(3) {
+        width: 25px;
+      }
+    }
+  }
+}

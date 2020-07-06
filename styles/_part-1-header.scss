@@ -26,7 +26,7 @@ header {
 
   @include respond(phone) {
     justify-content: space-between;
-    padding: 10rem 0 4rem 0;
+    padding: 15rem 0 4rem 0;
   }
 
   .header-text {

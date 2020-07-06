@@ -37,4 +37,28 @@ window.addEventListener("DOMContentLoaded", () => {
       item.insertAdjacentHTML("beforeend", insertItem);
     }
   }
+
+  // navbar section
+  {
+    const nav = document.querySelector("nav");
+    const navToggle = document.querySelector(".nav-toggle");
+
+    (function fixedNav() {
+      window.addEventListener("scroll", (e) => {
+        const navHeight = nav.getBoundingClientRect().height;
+        const totalHeight = navHeight + 100;
+        const scrollHeight = window.pageYOffset;
+
+        if (scrollHeight > totalHeight) {
+          nav.classList.add("fixed-nav");
+        } else {
+          nav.classList.remove("fixed-nav");
+        }
+      });
+    })();
+    // navtoggle
+    navToggle.addEventListener("click", (e) => {
+      nav.classList.toggle("active");
+    });
+  }
 });
