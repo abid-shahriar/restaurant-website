@@ -1668,7 +1668,7 @@ nav .menu-item ul li a:hover {
 
 @media (max-width: 992px) {
   .reservation {
-    padding: 7rem;
+    padding: 2rem;
     padding-bottom: 15rem;
   }
 }
