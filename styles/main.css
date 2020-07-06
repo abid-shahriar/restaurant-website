@@ -221,14 +221,20 @@ a {
   height: 60rem;
   overflow-y: scroll;
   margin-bottom: 4rem;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.521);
   border-radius: 5px;
   padding: 1rem;
 }
 
+@media (max-width: 768px) {
+  .dishes {
+    height: 80rem;
+  }
+}
+
 .dishes::-webkit-scrollbar {
   background-color: transparent;
-  width: 0.2rem;
+  width: 2px;
 }
 
 .dishes::-webkit-scrollbar-thumb {
@@ -436,6 +442,20 @@ nav {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    height: auto;
+    padding: 2rem 0;
+  }
+}
+
 nav::before {
   content: "";
   position: absolute;
@@ -447,6 +467,32 @@ nav::before {
   z-index: -1;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
+}
+
+nav .logo {
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+}
+
+nav .logo a img {
+  height: 100%;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  nav .logo a img {
+    height: 9rem;
+    width: 9rem;
+  }
+}
+
+nav .nav-toggle {
+  font-size: 3rem;
+  color: white;
+  margin: 0 2rem;
 }
 
 nav .menu-item ul {
@@ -465,6 +511,18 @@ nav .menu-item ul {
           flex-direction: row;
 }
 
+@media (max-width: 768px) {
+  nav .menu-item ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 nav .menu-item ul li {
   height: 100%;
   list-style: none;
@@ -472,12 +530,20 @@ nav .menu-item ul li {
 }
 
 nav .menu-item ul li a {
+  display: inline-block;
   text-decoration: none;
   font-size: 2.5rem;
   color: white;
   padding: 1.2rem 1rem;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  nav .menu-item ul li a {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+  }
 }
 
 nav .menu-item ul li a:hover {

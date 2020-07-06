@@ -13,6 +13,13 @@ nav {
   left: 0;
   width: 100%;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 2rem 0;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -25,9 +32,39 @@ nav {
     backdrop-filter: blur(5px);
   }
 
+  .logo {
+    height: 7rem;
+    width: 7rem;
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    a {
+      img {
+        height: 100%;
+        width: 100%;
+
+        @include respond(tab-port) {
+          height: 9rem;
+          width: 9rem;
+        }
+      }
+    }
+  }
+
+  .nav-toggle {
+    font-size: 3rem;
+    color: white;
+    margin: 0 2rem;
+  }
+
   .menu-item {
     ul {
       @include flexBox;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
       li {
         height: 100%;
@@ -35,11 +72,17 @@ nav {
         margin: 0 1rem;
 
         a {
+          display: inline-block;
           text-decoration: none;
           font-size: 2.5rem;
           color: white;
           padding: 1.2rem 1rem;
           transition: 0.3s;
+
+          @include respond(tab-port) {
+            font-size: 3.5rem;
+            margin: 1rem 0;
+          }
 
           &:hover {
             color: var(--color-secondary);
