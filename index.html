@@ -29,9 +29,9 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body onload="onLoadFunction()">
     <!-- Part-8 Preloader Section Start ################ -->
-    <div class="preloader">
+    <div id="preloader">
       <span class="loader" data-text="Loading...">Loading...</span>
     </div>
     <!-- Part-8 Preloader Section End ################ -->
@@ -387,6 +387,14 @@
 
     <!-- JavaScript -->
     <script src="./js/main.js" type="module"></script>
+    <script>
+      const preloader = document.getElementById("preloader");
+      function onLoadFunction() {
+        setTimeout(() => {
+          preloader.classList.add("preloaderFadeOut");
+        }, 1000);
+      }
+    </script>
   </body>
 </html>
 
