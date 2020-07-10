@@ -69,6 +69,87 @@ a {
           transform-origin: top;
 }
 
+.loader {
+  color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.loader::before {
+  content: attr(data-text);
+  width: 100%;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: loader 2s ease-in-out infinite;
+          animation: loader 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes loader {
+  0%,
+  10%,
+  90%,
+  100% {
+    -webkit-clip-path: circle(0 at 50% 50%);
+            clip-path: circle(0 at 50% 50%);
+  }
+  40%,
+  60% {
+    -webkit-clip-path: circle(50vmax at 50% 50%);
+            clip-path: circle(50vmax at 50% 50%);
+  }
+}
+
+@keyframes loader {
+  0%,
+  10%,
+  90%,
+  100% {
+    -webkit-clip-path: circle(0 at 50% 50%);
+            clip-path: circle(0 at 50% 50%);
+  }
+  40%,
+  60% {
+    -webkit-clip-path: circle(50vmax at 50% 50%);
+            clip-path: circle(50vmax at 50% 50%);
+  }
+}
+
+#preloader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #009688;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 21;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.loader {
+  font-family: "Baloo Tamma", sans-serif;
+  font-size: 5rem;
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+#preloader.preloaderFadeOut {
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 .full-menu {
   height: auto;
   width: 100%;
@@ -2051,87 +2132,6 @@ footer {
 
 .footer-bottom p a:hover {
   color: #00aeff;
-}
-
-.loader {
-  color: rgba(0, 0, 0, 0.2);
-  position: relative;
-}
-
-.loader::before {
-  content: attr(data-text);
-  width: 100%;
-  color: #fff;
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-animation: loader 2s ease-in-out infinite;
-          animation: loader 2s ease-in-out infinite;
-}
-
-@-webkit-keyframes loader {
-  0%,
-  10%,
-  90%,
-  100% {
-    -webkit-clip-path: circle(0 at 50% 50%);
-            clip-path: circle(0 at 50% 50%);
-  }
-  40%,
-  60% {
-    -webkit-clip-path: circle(50vmax at 50% 50%);
-            clip-path: circle(50vmax at 50% 50%);
-  }
-}
-
-@keyframes loader {
-  0%,
-  10%,
-  90%,
-  100% {
-    -webkit-clip-path: circle(0 at 50% 50%);
-            clip-path: circle(0 at 50% 50%);
-  }
-  40%,
-  60% {
-    -webkit-clip-path: circle(50vmax at 50% 50%);
-            clip-path: circle(50vmax at 50% 50%);
-  }
-}
-
-#preloader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100vh;
-  width: 100%;
-  background-color: #009688;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 21;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform-origin: bottom;
-          transform-origin: bottom;
-}
-
-.loader {
-  font-family: "Baloo Tamma", sans-serif;
-  font-size: 5rem;
-  letter-spacing: 0.25rem;
-  text-transform: uppercase;
-  margin: auto;
-}
-
-#preloader.preloaderFadeOut {
-  height: 0;
-  overflow: hidden;
-  pointer-events: none;
 }
 
 .mainSectionhide {
