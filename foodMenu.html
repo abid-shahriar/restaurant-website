@@ -6,6 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Food-O'Clock</title>
     <!-- CSS -->
+    <style>
+      #preloader {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background-color: #009688;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 21;
+        transition: 1s;
+        transform-origin: bottom;
+      }
+
+      #loader {
+        color: rgba(0, 0, 0, 0.2);
+        position: relative;
+        font-family: "Baloo Tamma", sans-serif;
+        font-size: 5rem;
+        letter-spacing: 0.25rem;
+        text-transform: uppercase;
+        margin: auto;
+      }
+
+      #loader::before {
+        content: attr(data-text);
+        width: 100%;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: loader 2s ease-in-out infinite;
+      }
+
+      @keyframes loader {
+        0%,
+        10%,
+        90%,
+        100% {
+          clip-path: circle(0 at 50% 50%);
+        }
+
+        40%,
+        60% {
+          clip-path: circle(50vmax at 50% 50%);
+        }
+      }
+
+      #preloader.preloaderFadeOut {
+        height: 0;
+        overflow: hidden;
+        pointer-events: none;
+      }
+    </style>
     <link rel="stylesheet" href="./styles/main.css" />
 
     <!-- Fonts -->
@@ -32,7 +87,7 @@
   <body onload="onLoadFunction()">
     <!-- Part-8 Preloader Section Start ################ -->
     <div id="preloader">
-      <span class="loader" data-text="Loading...">Loading...</span>
+      <span id="loader" data-text="Loading...">Loading...</span>
     </div>
     <!-- Part-8 Preloader Section End ################ -->
 
@@ -189,7 +244,7 @@
         }, 1000);
       }
     </script>
-    <script src="./js/foodMenu.js" defer></script>
+    <script src="./js/foodMenu.js"></script>
   </body>
 </html>
 
