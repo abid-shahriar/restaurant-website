@@ -239,7 +239,9 @@
     <script>
       const preloader = document.getElementById("preloader");
       function onLoadFunction() {
-        preloader.classList.add("preloaderFadeOut");
+        setTimeout(() => {
+          preloader.classList.add("preloaderFadeOut");
+        }, 1000);
       }
     </script>
     <script src="./js/foodMenu.js"></script>

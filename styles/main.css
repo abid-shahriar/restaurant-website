@@ -677,7 +677,7 @@ nav .menu-item ul li a {
 }
 
 nav .menu-item ul li a:hover {
-  color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 .fixed-nav {
