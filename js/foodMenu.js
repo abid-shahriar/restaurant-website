@@ -187,7 +187,7 @@ window.addEventListener("DOMContentLoaded", () => {
     (function fixedNav() {
       window.addEventListener("scroll", (e) => {
         const navHeight = nav.getBoundingClientRect().height;
-        const totalHeight = navHeight + 100;
+        const totalHeight = navHeight + 50;
         const scrollHeight = window.pageYOffset;
 
         if (scrollHeight > totalHeight) {

@@ -91,4 +91,18 @@ footer {
     }
   }
 }
+
+.credit {
+  text-align: center;
+  margin: 2rem;
+  p {
+    font-size: 1.8rem;
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: rgb(0, 174, 255);
+    }
+  }
+}
 // Footer Section End ######################

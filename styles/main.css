@@ -1,7 +1,7 @@
 @-webkit-keyframes navAnimation {
   0% {
-    -webkit-transform: translateY(-6rem);
-            transform: translateY(-6rem);
+    -webkit-transform: translateY(-7rem);
+            transform: translateY(-7rem);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -11,8 +11,8 @@
 
 @keyframes navAnimation {
   0% {
-    -webkit-transform: translateY(-6rem);
-            transform: translateY(-6rem);
+    -webkit-transform: translateY(-7rem);
+            transform: translateY(-7rem);
   }
   100% {
     -webkit-transform: translateY(0);
@@ -500,7 +500,7 @@ nav::before {
   nav {
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -2050,6 +2050,21 @@ footer {
 }
 
 .footer-bottom p a:hover {
+  color: #00aeff;
+}
+
+.credit {
+  text-align: center;
+  margin: 2rem;
+}
+
+.credit p {
+  font-size: 1.8rem;
+}
+
+.credit p a:link,
+.credit p a:visited {
+  text-decoration: none;
   color: #00aeff;
 }
 
